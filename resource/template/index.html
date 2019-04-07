@@ -12,335 +12,71 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
     integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="/static/css/index.css">
-  <title>简单网址导航</title>
+  <title>{{.Conf.Name}}</title>
   <link rel="shortcut icon" type="image/png" href="/static/favicon.png" />
 </head>
 
 <body>
   <div class="container wrapbox">
     <div class="page-header header">
-      <h2>简单网址导航<small class="smallTitle">导航副标题 – Ctrl+D 收藏 </small></h2>
+      <h2>{{.Conf.Name}}<small class="smallTitle">{{.Conf.Slogan}} – Ctrl+D 收藏 </small></h2>
     </div>
     <div class="row">
       <div class="col-sm-3 col-xs-12 pc">
         <aside class="aside">
           <div class="asideTitle">
-            <h4>常用工具</h4>
+            <h4>{{.Conf.Aside}}</h4>
           </div>
+          {{range .Conf.AsideCats}}
           <div class="asideList">
-            <h4>网站信息</h4>
+            <h4>{{.Name}}</h4>
             <ul>
+              {{range .Links}}
               <li>
-                <a href="#">网站信息11</a>
+                <a href="{{.URL}}" data-desc="{{.Desc}}" rel="nofollow external">{{.Name}}</a>
               </li>
-              <li>
-                <a href="#">网站信息22</a>
-              </li>
+              {{end}}
             </ul>
           </div>
-          <div class="asideList">
-            <h4>网站信息</h4>
-            <ul>
-              <li>
-                <a href="#">网站信息11</a>
-              </li>
-              <li>
-                <a href="#">网站信息22</a>
-              </li>
-            </ul>
-          </div>
-          <div class="asideList">
-            <h4>网站信息</h4>
-            <ul>
-              <li>
-                <a href="#">网站信息11</a>
-              </li>
-              <li>
-                <a href="#">网站信息22</a>
-              </li>
-            </ul>
-          </div>
+          {{end}}
         </aside>
       </div>
       <div class="col-sm-9 col-xs-12">
         <section class="main">
+          {{range .Conf.MainCats}}
           <div class="mainBox">
             <div class="asideTitle">
               <h4>推荐网站</h4>
             </div>
             <ul class="mainList">
+              {{range .Links}}
               <li>
-                <a href="#">google</a>
+                <a href="{{.URL}}" data-desc="{{.Desc}}" rel="nofollow external">{{.Name}}</a>
               </li>
-              <li>
-                <a href="#">baidu</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
+              {{end}}
             </ul>
           </div>
-          <div class="mainBox">
-            <div class="asideTitle">
-              <h4>推荐网站</h4>
-            </div>
-            <ul class="mainList">
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">baidu</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-            </ul>
-          </div>
+          {{end}}
         </section>
 
       </div>
       <div class="col-sm-3 col-xs-12 mobile">
         <aside class="aside">
           <div class="asideTitle">
-            <h4>常用工具</h4>
+            <h4>{{.Conf.Aside}}</h4>
           </div>
+          {{range .Conf.AsideCats}}
           <div class="asideList">
-            <h4>网站信息</h4>
+            <h4>{{.Name}}</h4>
             <ul>
+              {{range .Links}}
               <li>
-                <a href="#">网站信息11</a>
+                <a href="{{.URL}}" data-desc="{{.Desc}}" rel="nofollow external">{{.Name}}</a>
               </li>
-              <li>
-                <a href="#">网站信息22</a>
-              </li>
+              {{end}}
             </ul>
           </div>
-          <div class="asideList">
-            <h4>网站信息</h4>
-            <ul>
-              <li>
-                <a href="#">网站信息11</a>
-              </li>
-              <li>
-                <a href="#">网站信息22</a>
-              </li>
-            </ul>
-          </div>
-          <div class="asideList">
-            <h4>网站信息</h4>
-            <ul>
-              <li>
-                <a href="#">网站信息11</a>
-              </li>
-              <li>
-                <a href="#">网站信息22</a>
-              </li>
-            </ul>
-          </div>
+          {{end}}
         </aside>
       </div>
     </div>
@@ -350,10 +86,7 @@
         <div class="col-xs-12">
           <ul class="footList">
             <li>
-              <a href="#">关于导航</a>
-            </li>
-            <li>
-              <a href="#">申请友情链接</a>
+              <a href="/">{{.Conf.Name}}</a> &copy; 2019
             </li>
             <li>
               <a data-toggle="modal" style="cursor:pointer" data-target="#myModal">申请收录</a>
@@ -370,26 +103,15 @@
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
               aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="myModalLabel">我们要如何联系您？</h4>
+          <h4 class="modal-title" id="myModalLabel">想加入「{{.Conf.Name}}」？</h4>
         </div>
         <div class="modal-body">
           <p class="lead" style="font-size:14px;">
-            一段文字说明一段文字说明一段文字说明一段文字说明一段文字说明一段文字说明一段文字说明一段文字说明一段文字说明一段文字说明一段文字说明一段文字说明</p>
+            请将您的 站点、站点的简介从下面文本域中说明，如果后续希望我们与您取得联系的话还可以留下您的 联系方式。
+          </p>
           <form>
             <div class="form-group">
-              <input type="text" class="form-control" id="exampleInputEmail1" placeholder="您要收录的域名？">
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" id="exampleInputEmail1" placeholder="怎么称呼？">
-            </div>
-            <div class="form-group">
-              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="您的电子邮箱？">
-            </div>
-            <div class="form-group">
-              <input type="tel" class="form-control" id="exampleInputEmail1" placeholder="您的电话号码？">
-            </div>
-            <div class="form-group">
-              <textarea class="form-control" rows="3" placeholder="备注信息"></textarea>
+              <textarea class="form-control" rows="3" placeholder="站点、站点简介、联系方式"></textarea>
             </div>
             <div class="form-group">
               <div class="row">
@@ -397,16 +119,9 @@
                   <input type="text" class="form-control" id="exampleInputEmail1" placeholder="验证码">
                 </div>
                 <div class="col-xs-4">
-                  <img width="80px" src="/img/code.jpg">
+                  <img width="80px" src="">
                 </div>
               </div>
-
-
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox"> 我的报价具备法律约束力。
-              </label>
             </div>
           </form>
         </div>

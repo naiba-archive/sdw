@@ -1,0 +1,26 @@
+name: 简单网址导航
+slogan: 一个简单的网址导航
+aside: 常用工具
+aside_cats:
+  - name: 博客引擎
+    links:
+    - name: Solitudes
+      url: https://solitud.es
+      desc: 一个简洁的博客引擎
+main_cats:
+  - name: 开发者
+    links:
+    - name: 奶爸
+      url: https://github.com/naiba
+      desc: 奶爸不是奶爸
+    - name: GLD
+      url: https://github.com/gldvip
+      desc: GLD不是奶爸
+  - name: 开发者
+    links:
+    - name: 奶爸
+      url: https://github.com/naiba
+      desc: 奶爸不是奶爸
+    - name: GLD
+      url: https://github.com/gldvip
+      desc: GLD不是奶爸
