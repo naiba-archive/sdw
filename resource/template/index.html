@@ -109,30 +109,22 @@
           <p class="lead" style="font-size:14px;">
             请将您的 站点、站点的简介从下面文本域中说明，如果后续希望我们与您取得联系的话还可以留下您的 联系方式。
           </p>
-          <form>
-            <div class="form-group">
-              <textarea class="form-control" rows="3" placeholder="站点、站点简介、联系方式"></textarea>
-            </div>
-            <div class="form-group">
-              <div class="row">
-                <div class="col-xs-8">
-                  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="验证码">
-                </div>
-                <div class="col-xs-4">
-                  <img width="80px" src="">
-                </div>
-              </div>
-            </div>
-          </form>
+          <div class="form-group">
+            <textarea id="content" class="form-control" rows="3" placeholder="站点、站点简介、联系方式"></textarea>
+          </div>
+          <div class="form-group">
+            <div class="g-recaptcha" data-sitekey="{{.Conf.Recaptcha.SiteKey}}"></div>
+          </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">返回</button>
-          <button type="button" class="btn btn-primary">提交</button>
+          <button class="btn btn-default" data-dismiss="modal">返回</button>
+          <button id="submit" class="btn btn-primary">提交</button>
         </div>
       </div>
     </div>
   </div>
   <script src="/static/js/index.js"></script>
+  <script src="https://www.recaptcha.net/recaptcha/api.js" async defer></script>
 </body>
 
 </html>

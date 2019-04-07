@@ -15,11 +15,17 @@ type Cat struct {
 
 //Config 网站配置
 type Config struct {
-	Name      string
-	Slogan    string
-	Aside     string
+	Name       string
+	Slogan     string
+	Aside      string
+	ServerChan string `mapstructure:"server_chan"`
+	Recaptcha  struct {
+		SiteKey string `mapstructure:"site_key"`
+		Secret  string
+	}
 	AsideCats []Cat `mapstructure:"aside_cats"`
 	MainCats  []Cat `mapstructure:"main_cats"`
 }
 
+//C 全站配置
 var C Config

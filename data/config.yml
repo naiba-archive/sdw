@@ -1,6 +1,10 @@
 name: 简单网址导航
 slogan: 一个简单的网址导航
 aside: 常用工具
+server_chan: xxxx-xxxxxxxxxx
+recaptcha:
+  site_key: xxxxxxxxxxxxxxxxxxxxxxxx
+  secret: xxxxxxxxxxx-xxxxxx-xxxxx
 aside_cats:
   - name: 博客引擎
     links:

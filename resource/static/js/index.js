@@ -12,11 +12,23 @@ $('a').hover(function () {
 }, function () {
   $('.dialog').css({ 'display': 'none' })
 })
-//申请收录
-$('#exampleModal').on('show.bs.modal', function (event) {
-  var button = $(event.relatedTarget)
-  var recipient = button.data('whatever')
-  var modal = $(this)
-  modal.find('.modal-title').text('New message to ' + recipient)
-  modal.find('.modal-body input').val(recipient)
+//提交数据
+$('#submit').click(function () {
+  if (!$('#content').val()) {
+    alert("请填写站点及站点简介")
+    return
+  }
+  if (!$('#g-recaptcha-response').val()) {
+    alert("请通过机器人验证")
+    return
+  }
+  $.post("/submit", {
+    content: $('#content').val(),
+    captcha: $('#g-recaptcha-response').val()
+  }).done(function () {
+    alert('提交成功，管理员已收到您的请求')
+    $('#myModal').modal('hide')
+  }).fail(function (resp) {
+    alert(resp.responseText)
+  })
 })
