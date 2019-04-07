@@ -1,2 +1,3 @@
-# sdw
-Simple Directory of Web
+# 简单网址导航
+
+一个简单的网址导航程序。
