@@ -33,7 +33,7 @@
             <ul>
               {{range .Links}}
               <li>
-                <a href="{{.URL}}" data-desc="{{.Desc}}" rel="nofollow external">{{.Name}}</a>
+                <a href="{{.URL}}" data-desc="{{.Desc}}" rel="nofollow external" target="_blank">{{.Name}}</a>
               </li>
               {{end}}
             </ul>
@@ -46,12 +46,12 @@
           {{range .Conf.MainCats}}
           <div class="mainBox">
             <div class="asideTitle">
-              <h4>推荐网站</h4>
+              <h4>{{.Name}}</h4>
             </div>
             <ul class="mainList">
               {{range .Links}}
               <li>
-                <a href="{{.URL}}" data-desc="{{.Desc}}" rel="nofollow external">{{.Name}}</a>
+                <a href="{{.URL}}" data-desc="{{.Desc}}" rel="nofollow external" target="_blank">{{.Name}}</a>
               </li>
               {{end}}
             </ul>
@@ -71,7 +71,7 @@
             <ul>
               {{range .Links}}
               <li>
-                <a href="{{.URL}}" data-desc="{{.Desc}}" rel="nofollow external">{{.Name}}</a>
+                <a href="{{.URL}}" data-desc="{{.Desc}}" rel="nofollow external" target="_blank">{{.Name}}</a>
               </li>
               {{end}}
             </ul>
