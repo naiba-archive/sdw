@@ -5,6 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
   <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
     integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -15,10 +19,10 @@
 <body>
   <div class="container wrapbox">
     <div class="page-header header">
-      <h2>简单网址导航<small>Simple Web Site Navigation</small></h2>
+      <h2>简单网址导航<small class="smallTitle">Simple Web Site Navigation</small></h2>
     </div>
     <div class="row">
-      <div class="col-sm-3 col-xs-12">
+      <div class="col-sm-3 col-xs-12 pc">
         <aside class="aside">
           <div class="asideTitle">
             <h4>常用工具</h4>
@@ -299,6 +303,46 @@
         </section>
 
       </div>
+      <div class="col-sm-3 col-xs-12 mobile">
+          <aside class="aside">
+            <div class="asideTitle">
+              <h4>常用工具</h4>
+            </div>
+            <div class="asideList">
+              <h4>网站信息</h4>
+              <ul>
+                <li>
+                  <a href="#">网站信息11</a>
+                </li>
+                <li>
+                  <a href="#">网站信息22</a>
+                </li>
+              </ul>
+            </div>
+            <div class="asideList">
+              <h4>网站信息</h4>
+              <ul>
+                <li>
+                  <a href="#">网站信息11</a>
+                </li>
+                <li>
+                  <a href="#">网站信息22</a>
+                </li>
+              </ul>
+            </div>
+            <div class="asideList">
+              <h4>网站信息</h4>
+              <ul>
+                <li>
+                  <a href="#">网站信息11</a>
+                </li>
+                <li>
+                  <a href="#">网站信息22</a>
+                </li>
+              </ul>
+            </div>
+          </aside>
+        </div>
     </div>
 
     <footer>
@@ -312,14 +356,55 @@
               <a href="#">申请友情链接</a>
             </li>
             <li>
-              <a href="#">一键加qq群</a>
+              <a data-toggle="modal" style="cursor:pointer" data-target="#myModal">申请收录</a>
             </li>
           </ul>
         </div>
       </div>
     </footer>
   </div>
-
+  <div class="dialog"></div>
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">我们要如何联系您？</h4>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <input type="text" class="form-control" id="exampleInputEmail1" placeholder="您要收录的域名？">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="exampleInputEmail1" placeholder="怎么称呼？">
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="您的电子邮箱？">
+            </div>
+            <div class="form-group">
+              <input type="tel" class="form-control" id="exampleInputEmail1" placeholder="您的电话号码？">
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" rows="3" placeholder="备注信息"></textarea>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox"> 我的报价具备法律约束力。
+              </label>
+            </div>
+            <!-- <button type="submit" class="btn btn-default">Submit</button> -->
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">返回</button>
+          <button type="button" class="btn btn-primary">提交</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./js/index.js"></script>
 </body>
 
 </html>
