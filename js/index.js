@@ -3,7 +3,7 @@ $('.main a').hover(function () {
   let offsetTop = $(this).offset().top + 20
   let offsetLeft = $(this).offset().left + 20
   $('.dialog').css({ 'display': 'block', 'top': offsetTop, 'left': offsetLeft })
-  $('.dialog').html(`<p>简介:${$(this).text()}</p>`)
+  $('.dialog').html(`<p>${$(this).text()}</p>`)
 }, function () {
   $('.dialog').css({ 'display': 'none' })
 })
