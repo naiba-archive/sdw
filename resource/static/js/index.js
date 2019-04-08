@@ -12,6 +12,11 @@ $('a').hover(function () {
 }, function () {
   $('.dialog').css({ 'display': 'none' })
 })
+$('a').click(function () {
+  if ($(this).attr('href').startsWith('http')) {
+    $(this).attr('href', $(this).attr('href') + "?utm_source=" + window.location.hostname)
+  }
+})
 //提交数据
 $('#submit').click(function () {
   if (!$('#content').val()) {
