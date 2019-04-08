@@ -1,3 +1,4 @@
+//链接介绍悬浮窗
 $('a').hover(function () {
   if (!$(this).data('desc')) {
     return
@@ -12,6 +13,7 @@ $('a').hover(function () {
 }, function () {
   $('.dialog').css({ 'display': 'none' })
 })
+//点击加 utm_source
 $('a').click(function () {
   if ($(this).attr('href').startsWith('http')) {
     $(this).attr('href', $(this).attr('href') + "?utm_source=" + window.location.hostname)
@@ -37,3 +39,7 @@ $('#submit').click(function () {
     alert(resp.responseText)
   })
 })
+//手机界面常用工具瀑布流
+$('.mobile').masonry({
+  itemSelector: '.asideList'
+});
