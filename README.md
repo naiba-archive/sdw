@@ -4,7 +4,7 @@
 
 :earth_americas: 一个简单的网址导航程序。
 
-## 部署说明
+## 部署
 
 1. 创建数据目录 `data`
 2. 创建配置文件 `data/config.yml` 内容参考代码里面的 `data/config.yml`
@@ -12,4 +12,4 @@
 
 ## 感谢
 
-@gldvip 对本项目的大力支持
+[@gld](https://github.com/gldvip) 前端贡献

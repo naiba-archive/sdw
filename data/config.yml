@@ -1,9 +1,9 @@
 name: 简单网址导航
 slogan: 一个简单的网址导航
 aside: 常用工具
-server_chan: xxxx-xxxxxxxxxx
+server_chan: xxxx-xxxxxxxxxx #sc.ftqq.com key
 recaptcha:
-  site_key: xxxxxxxxxxxxxxxxxxxxxxxx
+  site_key: xxxxxxxxxxxxxxxxxxxxxxxx # https://www.google.com/recaptcha/
   secret: xxxxxxxxxxx-xxxxxx-xxxxx
 stats: |
   <script type="text/javascript">document.write('站长统计');</script>
