@@ -23,6 +23,7 @@ type Config struct {
 		SiteKey string `mapstructure:"site_key"`
 		Secret  string
 	}
+	Stats     string
 	AsideCats []Cat `mapstructure:"aside_cats"`
 	MainCats  []Cat `mapstructure:"main_cats"`
 }

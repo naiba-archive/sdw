@@ -91,6 +91,11 @@
             <li>
               <a data-toggle="modal" style="cursor:pointer" data-target="#myModal">申请收录</a>
             </li>
+            {{if .Conf.Stats}}
+            <li>
+              {{unsafe .Conf.Stats}}
+            </li>
+            {{end}}
           </ul>
         </div>
       </div>

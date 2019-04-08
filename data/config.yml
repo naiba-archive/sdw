@@ -5,6 +5,8 @@ server_chan: xxxx-xxxxxxxxxx
 recaptcha:
   site_key: xxxxxxxxxxxxxxxxxxxxxxxx
   secret: xxxxxxxxxxx-xxxxxx-xxxxx
+stats: |
+  <script type="text/javascript">document.write('站长统计');</script>
 aside_cats:
   - name: 博客引擎
     links:

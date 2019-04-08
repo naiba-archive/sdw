@@ -2,8 +2,8 @@ package main
 
 import (
 	"encoding/json"
+	"html/template"
 	"io/ioutil"
-	"log"
 	"net/http"
 	"net/url"
 	"strings"
@@ -23,11 +23,15 @@ func init() {
 	if err != nil {
 		panic(err)
 	}
-	log.Println(sdw.C)
 }
 
 func main() {
 	r := gin.Default()
+	r.SetFuncMap(template.FuncMap{
+		"unsafe": func(raw string) template.HTML {
+			return template.HTML(raw)
+		},
+	})
 	r.LoadHTMLGlob("resource/template/*")
 	r.Static("/static", "resource/static")
 	r.GET("/", func(c *gin.Context) {
