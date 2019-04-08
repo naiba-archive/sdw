@@ -67,18 +67,20 @@
           <div class="asideTitle">
             <h4>{{.Conf.Aside}}</h4>
           </div>
-          {{range .Conf.AsideCats}}
-          <div class="asideList col-xs-6">
-            <h4>{{.Name}}</h4>
-            <ul>
-              {{range .Links}}
-              <li>
-                <a href="{{.URL}}" data-desc="{{.Desc}}" rel="nofollow external" target="_blank">{{.Name}}</a>
-              </li>
-              {{end}}
-            </ul>
+          <div class="row masonry">
+            {{range .Conf.AsideCats}}
+            <div class="asideList col-xs-6">
+              <h4>{{.Name}}</h4>
+              <ul>
+                {{range .Links}}
+                <li>
+                  <a href="{{.URL}}" data-desc="{{.Desc}}" rel="nofollow external" target="_blank">{{.Name}}</a>
+                </li>
+                {{end}}
+              </ul>
+            </div>
+            {{end}}
           </div>
-          {{end}}
         </aside>
       </div>
     </div>
@@ -130,7 +132,7 @@
       </div>
     </div>
   </div>
-  <script src="/static/js/index.js?v1"></script>
+  <script src="/static/js/index.js?v2"></script>
 </body>
 
 </html>

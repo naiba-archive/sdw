@@ -40,6 +40,6 @@ $('#submit').click(function () {
   })
 })
 //手机界面常用工具瀑布流
-$('.mobile').masonry({
+$('.masonry').masonry({
   itemSelector: '.asideList'
 });
