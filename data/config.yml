@@ -11,6 +11,11 @@ aside_cats:
       - name: Solitudes
         url: https://solitud.es
         desc: 一个简洁的博客引擎
+  - name: 博客引擎
+    links:
+      - name: Solitudes
+        url: https://solitud.es
+        desc: 一个简洁的博客引擎
 main_cats:
   - name: 开发者
     links:
