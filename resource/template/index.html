@@ -95,11 +95,12 @@
             <li>
               <a data-toggle="modal" style="cursor:pointer" data-target="#myModal">申请收录</a>
             </li>
-            {{if .Conf.Stats}}
             <li>
+              Powered by <a href="https://github.com/naiba/sdw">sdw</a> build·{{.Conf.BuildVersion}}
+              {{if .Conf.Stats}}
               {{unsafe .Conf.Stats}}
+              {{end}}
             </li>
-            {{end}}
           </ul>
         </div>
       </div>

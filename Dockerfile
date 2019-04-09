@@ -3,7 +3,7 @@ FROM golang:alpine AS binarybuilder
 RUN apk --no-cache --no-progress add --virtual build-deps build-base git linux-pam-dev
 WORKDIR /sdw/
 COPY . .
-RUN CGO_ENABLED=true go build -o sdw app/web/main.go
+RUN CGO_ENABLED=true go build -o sdw -ldflags="-s -w -X github.com/naiba/sdw.BuildVersion=`git rev-parse HEAD`" app/web/main.go
 
 FROM alpine:latest
 RUN echo http://dl-2.alpinelinux.org/alpine/edge/community/ >>/etc/apk/repositories && apk --no-cache --no-progress add \
