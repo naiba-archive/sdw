@@ -68,7 +68,6 @@ body {
 
 .wrapbox {
     min-height: 100%;
-    margin-bottom: 100px;
     max-width: 950px;
 }
 
@@ -167,6 +166,6 @@ body {
         justify-content: center;
     }
     .noBorder{
-        border: none;
+        border: none !important;
     }
 }
