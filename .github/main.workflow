@@ -32,5 +32,5 @@ action "maddox/actions/ssh@master" {
   uses = "maddox/actions/ssh@master"
   needs = ["docker-push"]
   secrets = ["PRIVATE_KEY", "PUBLIC_KEY", "HOST", "USER", "PORT"]
-  args = "/NAIBA/scripts/sdw.sh"
+  args = "/NAIBA/script/sdw.sh"
 }
