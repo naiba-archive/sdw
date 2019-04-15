@@ -68,7 +68,6 @@ body {
 
 .wrapbox {
     min-height: 100%;
-    margin-bottom: 100px;
     max-width: 950px;
 }
 
@@ -157,4 +156,16 @@ body {
 
 .footList li:last-child {
     border: none;
+}
+@media screen and (max-width: 500px) {
+    .footList li{
+        margin-top: 4px;
+    }
+    .footList{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .noBorder{
+        border: none !important;
+    }
 }
