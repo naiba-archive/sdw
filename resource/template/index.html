@@ -24,25 +24,6 @@
       <h2>{{.Conf.Name}}<small class="smallTitle">{{.Conf.Slogan}} - Ctrl+D 收藏 </small></h2>
     </div>
     <div class="row">
-      <div class="col-sm-3 col-xs-12 pc">
-        <aside class="aside">
-          <div class="asideTitle">
-            <h4>{{.Conf.Aside}}</h4>
-          </div>
-          {{range .Conf.AsideCats}}
-          <div class="asideList">
-            <h4>{{.Name}}</h4>
-            <ul>
-              {{range .Links}}
-              <li>
-                <a href="{{.URL}}" data-desc="{{.Desc}}" rel="nofollow external" target="_blank">{{.Name}}</a>
-              </li>
-              {{end}}
-            </ul>
-          </div>
-          {{end}}
-        </aside>
-      </div>
       <div class="col-sm-9 col-xs-12">
         <section class="main">
           {{range .Conf.MainCats}}
@@ -60,16 +41,15 @@
           </div>
           {{end}}
         </section>
-
       </div>
-      <div class="col-sm-3 col-xs-12 mobile">
+      <div class="col-sm-3 col-xs-12">
         <aside class="aside">
           <div class="asideTitle">
             <h4>{{.Conf.Aside}}</h4>
           </div>
           <div class="row masonry">
             {{range .Conf.AsideCats}}
-            <div class="asideList col-xs-6">
+            <div class="asideList col-xs-6 col-sm-12">
               <h4>{{.Name}}</h4>
               <ul>
                 {{range .Links}}
@@ -84,7 +64,6 @@
         </aside>
       </div>
     </div>
-
     <footer>
       <div class="row">
         <div class="col-xs-12">

@@ -7,9 +7,9 @@
 ## 部署
 
 1. 创建数据目录 `data`
-2. 创建配置文件 `data/config.yml` 内容参考代码里面的 `data/config.yml`
+2. 创建配置文件 `data/config.yml` 内容参考代码里面的 `data/config.yml.example`
 3. Docker 部署 `docker run -d --restart always --name sdw -p 8083:8080 -v path-to-data:/sdw/data naiba/sdw`
 
 ## 感谢
 
-[@gld](https://github.com/gldvip) 前端贡献
+[@gld](https://github.com/gldvip)

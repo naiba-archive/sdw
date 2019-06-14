@@ -71,6 +71,14 @@ body {
     max-width: 950px;
 }
 
+.wrapbox>.row>div:first-child {
+    float: right;
+}
+
+.wrapbox>.row>div:last-child {
+    float: left;
+}
+
 .header {
     position: relative;
     padding-bottom: 20px;
@@ -110,7 +118,7 @@ body {
 }
 
 .asideList {
-    margin-top: 26px;
+    margin-top: 10px;
 }
 
 .asideList h4 {
